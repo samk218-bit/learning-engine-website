@@ -48,3 +48,149 @@
     height: 120px;
   }
 }
+/* ===== LEARNING ENGINE PROFESSIONAL DESIGN UPGRADE ===== */
+
+:root {
+  --ink: #101828;
+  --navy: #101d43;
+  --blue: #365dff;
+  --yellow: #ffbd24;
+  --muted: #667085;
+  --surface: #f6f8fc;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e8edf5;
+  box-shadow: 0 4px 24px rgba(16, 24, 40, 0.04);
+}
+
+.brand {
+  gap: 12px;
+}
+
+.brand-logo {
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 3px 12px rgba(16, 24, 40, 0.12);
+}
+
+.brand-name {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.main-nav a {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--blue);
+}
+
+button,
+.button,
+a.button,
+.subscribe-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+a.button:hover,
+.subscribe-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero {
+  overflow: hidden;
+}
+
+.hero h1 {
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.hero p {
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.section-heading h2,
+.latest-heading h2 {
+  letter-spacing: -0.04em;
+}
+
+.latest-section {
+  background: var(--surface);
+}
+
+.blog-card,
+.article-card,
+.video-panel {
+  border: 1px solid #e7ebf3;
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.045);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.blog-card:hover,
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(16, 24, 40, 0.09);
+}
+
+.about-section {
+  background: var(--white);
+}
+
+.about-logo {
+  filter: drop-shadow(0 12px 18px rgba(16, 24, 40, 0.10));
+}
+
+.site-footer {
+  border-top: 1px solid #e7ebf3;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .hero h1 {
+    letter-spacing: -0.04em;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
