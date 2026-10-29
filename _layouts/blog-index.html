@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Read Learning Engine articles about science, mega machines, space and how things work—in Hindi and English.">
+  <title>Learning Engine Blog — Science, Space & Engineering</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+</head>
+<body class="blog-body">
+  <a class="skip-link" href="#blog-main">Skip to articles</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">LE</span><span class="brand-name">Learning<span>Engine</span></span></a><nav class="main-nav blog-nav"><a href="/">Home</a><a href="/blog/" aria-current="page">Blog</a><a href="/#explore">Explore</a><a href="/#videos">Videos</a></nav><a class="nav-cta" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe <span>↗</span></a></div></header>
+  <main id="blog-main">
+    <section class="blog-hero"><div class="container"><p class="eyebrow"><span class="eyebrow-dot"></span> THE LEARNING ENGINE BLOG</p><h1>Big questions.<br><span>Clear answers.</span></h1><p>Science, engineering, space and everyday technology—explained in Hindi and English for curious minds.</p><div class="blog-language-note"><span>हिंदी</span><span>English</span><span>✦</span><span>Science made simple</span></div></div></section>
+    <section class="section blog-list-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">FRESH FROM THE ENGINE</p><h2>Explore the <span>articles.</span></h2></div><label class="search-box"><span>⌕</span><input id="blogSearch" type="search" placeholder="Search articles..." aria-label="Search articles"></label></div>
+      <div class="blog-filter-row"><button class="filter-button active" data-blog-filter="all">All articles</button><button class="filter-button" data-blog-filter="en">English</button><button class="filter-button" data-blog-filter="hi">हिंदी</button><button class="filter-button" data-blog-filter="mega-machines">Mega Machines</button><button class="filter-button" data-blog-filter="space-universe">Space</button><button class="filter-button" data-blog-filter="science-explained">Science</button><button class="filter-button" data-blog-filter="how-things-work">How Things Work</button></div>
+      <div class="blog-card-grid" id="blogCardGrid">
+      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+      {% for post in sorted_posts %}
+        <article class="blog-card" data-language="{{ post.lang | default: 'en' }}" data-categories="{{ post.categories | join: ' ' }}" data-search="{{ post.title | escape }} {{ post.description | escape }} {{ post.categories | join: ' ' }}">
+          <a class="blog-card-cover" href="{{ post.url }}"><span>{{ post.cover_emoji | default: '✦' }}</span><small>{{ post.categories | first | replace: '-', ' ' | upcase }}</small></a>
+          <div class="blog-card-body"><div class="blog-card-meta"><span>{{ post.lang | default: 'en' | upcase }}</span><span>•</span><span>{{ post.read_time | default: 4 }} MIN READ</span></div><h3><a href="{{ post.url }}">{{ post.title }}</a></h3><p>{{ post.description }}</p><a class="story-link" href="{{ post.url }}">Read article <span>→</span></a></div>
+        </article>
+      {% endfor %}
+      </div><p class="empty-state" id="blogEmptyState" hidden>No articles match. Try another search.</p>
+      <div class="publishing-tip"><strong>Want to publish a new article?</strong><p>Use the simple publishing guide included in your website files. You can add posts through GitHub without changing the homepage design.</p><a href="/PUBLISHING-GUIDE.md">How to publish an article →</a></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="/"><span class="brand-mark">LE</span><span class="brand-name">Learning<span>Engine</span></span></a><p>Stay curious. Keep discovering.</p><div class="social-links"><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://www.instagram.com/learningengine.official" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/learningengine.official" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div><div class="container footer-bottom"><span>© {{ site.time | date: "%Y" }} Learning Engine. All rights reserved.</span><span>Made for curious minds <b>✦</b></span></div></footer>
+  <script src="/blog.js" defer></script>
+</body></html>
