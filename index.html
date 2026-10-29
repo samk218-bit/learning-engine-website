@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Explore how the world works with Learning Engine — science, engineering, mega machines, space, and everyday technology explained simply.">
+  <meta property="og:title" content="Learning Engine — Discover How the World Works">
+  <meta property="og:description" content="Curiosity-driven science, engineering, space and technology explained simply.">
+  <meta property="og:type" content="website">
+  <title>Learning Engine — Discover How the World Works</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="Learning Engine home">
+        <span class="brand-mark" aria-hidden="true">LE</span>
+        <span class="brand-name">Learning<span>Engine</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#explore">Explore</a>
+        <a href="#latest">Latest</a>
+        <a href="#videos">Videos</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="nav-cta" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> FEED YOUR CURIOSITY</p>
+          <h1>Discover how<br>the world <span>works.</span></h1>
+          <p class="hero-text">From giant machines to the mysteries of space, explore the science and engineering behind the things that shape our world.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#explore">Start Exploring <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#videos"><span class="play-icon" aria-hidden="true">▶</span> Watch videos</a>
+          </div>
+          <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><span>⚙</span><span>✦</span><span>◎</span></div><p><strong>Curiosity meets clarity.</strong><br>Big ideas, made understandable.</p></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of science, engineering and space">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="planet planet-large"></div><div class="planet planet-small"></div>
+          <div class="art-card card-machine"><span class="art-icon">⚙</span><span><b>Engineering</b><small>Built by brilliant ideas</small></span></div>
+          <div class="art-card card-space"><span class="art-icon">✦</span><span><b>Space & beyond</b><small>Explore the unknown</small></span></div>
+          <div class="art-card card-science"><span class="art-icon">⌬</span><span><b>Science explained</b><small>Understand the why</small></span></div>
+          <div class="hero-stamp"><span>STAY</span><strong>CURIOUS</strong><span>EVERY DAY</span></div>
+        </div>
+      </div>
+      <div class="container topic-strip"><span>EXPLORE THE UNEXPLAINED</span><span>SCIENCE</span><i>✦</i><span>ENGINEERING</span><i>✦</i><span>SPACE</span><i>✦</i><span>TECHNOLOGY</span></div>
+    </section>
+
+    <section class="section explore-section" id="explore">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">YOUR CURIOSITY PLAYGROUND</p><h2>Explore by <span>interest.</span></h2></div>
+          <p>Follow a question. Discover a new world.<br>There's always more to understand.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category-card category-machines" href="#latest" data-category-link="Mega Machines"><span class="category-number">01 / ENGINEERING</span><span class="category-symbol">⚙</span><h3>Mega Machines</h3><p>Meet the colossal machines that build, lift and move our world.</p><span class="card-link">Explore stories <b>↗</b></span></a>
+          <a class="category-card category-space" href="#latest" data-category-link="Space & Universe"><span class="category-number">02 / COSMOS</span><span class="category-symbol">✦</span><h3>Space & Universe</h3><p>Journey through planets, stars and the edges of what we know.</p><span class="card-link">Explore stories <b>↗</b></span></a>
+          <a class="category-card category-science" href="#latest" data-category-link="Science Explained"><span class="category-number">03 / DISCOVERY</span><span class="category-symbol">⌬</span><h3>Science Explained</h3><p>Unpack the surprising science hidden in everyday life.</p><span class="card-link">Explore stories <b>↗</b></span></a>
+          <a class="category-card category-tech" href="#latest" data-category-link="How Things Work"><span class="category-number">04 / INNOVATION</span><span class="category-symbol">⟡</span><h3>How Things Work</h3><p>Understand the technology and clever design all around you.</p><span class="card-link">Explore stories <b>↗</b></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section latest-section" id="latest">
+      <div class="container">
+        <div class="section-heading latest-heading">
+          <div><p class="eyebrow">FRESH FROM THE ENGINE</p><h2>Curiosity starts <span>here.</span></h2></div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="storySearch" type="search" placeholder="Search stories..." aria-label="Search stories"></label>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter stories">
+          <button class="filter-button active" data-filter="All">All stories</button>
+          <button class="filter-button" data-filter="Mega Machines">Mega Machines</button>
+          <button class="filter-button" data-filter="Space & Universe">Space</button>
+          <button class="filter-button" data-filter="Science Explained">Science</button>
+          <button class="filter-button" data-filter="How Things Work">How things work</button>
+        </div>
+        <div class="story-grid" id="storyGrid">
+          <article class="story-card" data-category="How Things Work" data-search="airbag deploy crash safety sensors car">
+            <div class="story-visual visual-airbag"><span class="visual-label">EVERYDAY ENGINEERING</span><span class="visual-emoji">🚘</span><span class="visual-big">0.03s</span></div>
+            <div class="story-content"><p class="story-meta">HOW THINGS WORK <span>•</span> 4 MIN READ</p><h3>How Do Airbags Deploy So Fast?</h3><p>A look inside the sensors and chemistry that help protect passengers in a crash.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+          <article class="story-card" data-category="Space & Universe" data-search="mars rover earth control communication space">
+            <div class="story-visual visual-mars"><span class="visual-label">SPACE EXPLORATION</span><span class="visual-emoji">🪐</span><span class="visual-big">MARS</span></div>
+            <div class="story-content"><p class="story-meta">SPACE & UNIVERSE <span>•</span> 5 MIN READ</p><h3>Who Controls Mars Rovers From Earth?</h3><p>Discover how commands travel across millions of kilometres to robotic explorers.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+          <article class="story-card" data-category="Mega Machines" data-search="floating crane offshore oil platform heavy lift ocean">
+            <div class="story-visual visual-crane"><span class="visual-label">MEGA MACHINES</span><span class="visual-emoji">🏗️</span><span class="visual-big">HEAVY LIFT</span></div>
+            <div class="story-content"><p class="story-meta">MEGA MACHINES <span>•</span> 6 MIN READ</p><h3>How Giant Floating Cranes Lift Offshore Platforms</h3><p>Explore the engineering behind some of the largest lifts ever performed at sea.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+          <article class="story-card" data-category="Science Explained" data-search="cyclone formation weather ocean atmosphere science">
+            <div class="story-visual visual-cyclone"><span class="visual-label">SCIENCE EXPLAINED</span><span class="visual-emoji">🌀</span><span class="visual-big">CYCLONES</span></div>
+            <div class="story-content"><p class="story-meta">SCIENCE EXPLAINED <span>•</span> 3 MIN READ</p><h3>How Does a Cyclone Form?</h3><p>Warm ocean water, rising air and Earth's rotation combine to create powerful storms.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+          <article class="story-card" data-category="Mega Machines" data-search="dam construction concrete engineering water">
+            <div class="story-visual visual-dam"><span class="visual-label">ENGINEERING MARVELS</span><span class="visual-emoji">🌊</span><span class="visual-big">MEGA DAMS</span></div>
+            <div class="story-content"><p class="story-meta">MEGA MACHINES <span>•</span> 7 MIN READ</p><h3>How a Giant Dam Holds Back Water</h3><p>Learn how shape, mass and carefully managed pressure keep enormous structures stable.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+          <article class="story-card" data-category="How Things Work" data-search="noise cancelling headphones sound waves technology">
+            <div class="story-visual visual-audio"><span class="visual-label">TECH EXPLAINED</span><span class="visual-emoji">🎧</span><span class="visual-big">SILENCE</span></div>
+            <div class="story-content"><p class="story-meta">HOW THINGS WORK <span>•</span> 4 MIN READ</p><h3>How Do Noise-Cancelling Headphones Work?</h3><p>See how microphones and carefully timed sound waves can reduce unwanted noise.</p><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer" class="story-link">Explore the science <span>→</span></a></div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>No stories match that search. Try another keyword.</p>
+        <p class="content-note">Starter stories are examples. Next, we can turn each one into its own full article page and add your real video links.</p>
+      </div>
+    </section>
+
+    <section class="video-section" id="videos">
+      <div class="container video-panel">
+        <div class="video-copy"><p class="eyebrow">WATCH. WONDER. UNDERSTAND.</p><h2>Big questions.<br><span>Short answers.</span></h2><p>Watch visual explainers that make complex science and engineering easy to understand.</p><a class="button button-light" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Visit our YouTube channel <span>↗</span></a></div>
+        <div class="video-art"><div class="video-orbit"></div><div class="video-core">▶</div><span class="video-tag tag-one">SCIENCE</span><span class="video-tag tag-two">ENGINEERING</span><span class="video-tag tag-three">CURIOSITY</span></div>
+      </div>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="container about-grid"><div class="about-mark">LE<span>✦</span></div><div><p class="eyebrow">ABOUT LEARNING ENGINE</p><h2>The world is full of<br><span>“how does that work?”</span></h2><p>Learning Engine is built for curious minds. We explore the science, engineering and technology behind extraordinary machines, natural phenomena and everyday inventions — one clear explanation at a time.</p><a class="text-link" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Keep learning with us <span>↗</span></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><a class="brand brand-footer" href="#"><span class="brand-mark">LE</span><span class="brand-name">Learning<span>Engine</span></span></a><p>Stay curious. Keep discovering.</p><div class="social-links"><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://www.instagram.com/learningengine.official" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/learningengine.official" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Learning Engine. All rights reserved.</span><span>Made for curious minds <b>✦</b></span></div>
+  </footer>
+</body>
+</html>
