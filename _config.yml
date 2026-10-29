@@ -1,0 +1,13 @@
+title: Learning Engine
+email: ''
+description: Science, engineering, space and technology explained simply in Hindi and English.
+url: "https://learningengine.in"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:categories/:title/
+plugins: []
+exclude:
+  - README.md
+  - PUBLISHING-GUIDE.md
+  - Gemfile
+  - Gemfile.lock
