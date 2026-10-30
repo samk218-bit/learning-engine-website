@@ -288,3 +288,37 @@ a.button:hover,
 article li:empty {
   display: none;
 }
+/* Learning Engine blog article readability */
+.post-content,
+article {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content p,
+article p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.post-content h2,
+article h2 {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.post-content h3,
+article h3 {
+  margin-top: 24px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .post-content p,
+  article p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
