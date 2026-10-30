@@ -283,3 +283,8 @@ a.button:hover,
     border-radius: 10px;
   }
 }
+/* Hide empty bullet items in blog articles */
+.post-content li:empty,
+article li:empty {
+  display: none;
+}
