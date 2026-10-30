@@ -65,13 +65,13 @@ cover_emoji: "🌊"
 
 पनडुब्बी के काम करने का तरीका वीडियो के माध्यम से समझें।
 
-### YouTube Shorts पर देखें
 
-[▶ YouTube पर वीडियो देखें](https://youtube.com/shorts/xTMX-8ta8TM?si=lPUyDmCeCkf1EDV3)
 
-### Facebook पर देखें
 
-[▶ Facebook पर वीडियो देखें](https://www.facebook.com/share/v/19wyeXfYFq/)
+
+
+
+
 
 ## निष्कर्ष
 
@@ -84,7 +84,6 @@ cover_emoji: "🌊"
 Learning Engine को फॉलो करें:
 
 - YouTube: https://youtube.com/@learningengine
-- 
 <hr>
 
 <h2>🎬 वीडियो में देखें: पनडुब्बी कैसे काम करती है?</h2>
