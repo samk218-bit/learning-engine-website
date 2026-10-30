@@ -96,6 +96,8 @@ Learning Engine को फॉलो करें:
     src="https://www.youtube-nocookie.com/embed/xTMX-8ta8TM"
     title="पनडुब्बी कैसे काम करती है - Learning Engine"
     loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
   </iframe>
 </div>
