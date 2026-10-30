@@ -84,6 +84,9 @@ cover_emoji: "🌊"
 Learning Engine को फॉलो करें:
 
 - YouTube: https://youtube.com/@learningengine
+- Instagram: https://www.instagram.com/learningengine.official
+- Facebook: https://www.facebook.com/learningengine.official
+
 <hr>
 
 <h2>🎬 वीडियो में देखें: पनडुब्बी कैसे काम करती है?</h2>
