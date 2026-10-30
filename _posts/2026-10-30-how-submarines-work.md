@@ -84,5 +84,23 @@ cover_emoji: "🌊"
 Learning Engine को फॉलो करें:
 
 - YouTube: https://youtube.com/@learningengine
+- 
+<hr>
+
+<h2>🎬 वीडियो में देखें: पनडुब्बी कैसे काम करती है?</h2>
+
+<p>पनडुब्बी समुद्र में कैसे डूबती है, सतह पर कैसे आती है और पानी के अंदर कैसे चलती है? इस वीडियो में जानिए इसका विज्ञान।</p>
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/xTMX-8ta8TM"
+    title="पनडुब्बी कैसे काम करती है - Learning Engine"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<p><a href="https://youtube.com/shorts/xTMX-8ta8TM" target="_blank" rel="noopener noreferrer">▶ YouTube पर पूरा Short देखें</a></p>
+
 - Instagram: https://www.instagram.com/learningengine.official
 - Facebook: https://www.facebook.com/learningengine.official
