@@ -1,150 +1,140 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Explore how the world works with Learning Engine — science, engineering, mega machines, space, and everyday technology explained simply.">
-  <meta property="og:title" content="Learning Engine — Discover How the World Works">
-  <meta property="og:description" content="Curiosity-driven science, engineering, space and technology explained simply.">
-  <meta property="og:type" content="website">
-  <title>Learning Engine — Discover How the World Works</title>
-<link rel="icon" href="/learning-engine-logo.jpg" type="image/jpeg">
+  <meta name="description" content="Explore science, engineering, space and amazing technology with Learning Engine.">
+  <title>Learning Engine | Latest YouTube Shorts</title>
+  <link rel="icon" href="/learning-engine-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      color: #172033;
+      font-family: Arial, sans-serif;
+    }
+    .shorts-page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 50px;
+    }
+    .shorts-heading {
+      margin-bottom: 24px;
+    }
+    .shorts-heading p {
+      color: #345cf0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+    .shorts-heading h1 {
+      font-size: clamp(25px, 4vw, 38px);
+      margin: 8px 0;
+    }
+    .shorts-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .short-card {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+      border: 1px solid #e2e7f0;
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s ease;
+    }
+    .short-card:hover {
+      transform: translateY(-4px);
+    }
+    .short-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      background: #e5eaf2;
+    }
+    .short-card h2 {
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 0 12px;
+      margin: 12px 0 6px;
+    }
+    .short-card span {
+      display: block;
+      color: #345cf0;
+      font-size: 12px;
+      padding: 0 12px 14px;
+    }
+    @media (max-width: 900px) {
+      .shorts-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .shorts-page { padding: 22px 12px 35px; }
+      .shorts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .short-card h2 { font-size: 13px; }
+    }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#" aria-label="Learning Engine home">
-        <img class="brand-logo" src="/learning-engine-logo.jpg" alt="Learning Engine Logo">
-        <span class="brand-name">Learning<span>Engine</span></span>
+  <main class="shorts-page" id="videos">
+    <header class="shorts-heading">
+      <p>LATEST YOUTUBE SHORTS</p>
+      <h1>Watch our latest videos.</h1>
+      <div>Discover science, engineering, space and amazing technology.</div>
+    </header>
+
+    <section class="shorts-grid" aria-label="Latest Learning Engine YouTube Shorts">
+      <a class="short-card" href="https://www.youtube.com/shorts/47JWNZBCW2k" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/47JWNZBCW2k/hqdefault.jpg" alt="What If Space Could Power Earth?" loading="lazy">
+        <h2>What If Space Could Power Earth?</h2><span>Watch Short ↗</span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="#explore">Explore</a>
-        <a href="/blog/">Blog</a>
-        <a href="#latest">Latest</a>
-        <a href="#videos">Videos</a>
-        <a href="#about">About</a>
-      </nav>
-      <a class="nav-cta" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> FEED YOUR CURIOSITY</p>
-          <h1>Discover how<br>the world <span>works.</span></h1>
-          <p class="hero-text">From giant machines to the mysteries of space, explore the science and engineering behind the things that shape our world.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="/blog/">Read the blog <span aria-hidden="true">→</span></a>
-            <a class="button button-quiet" href="#videos"><span class="play-icon" aria-hidden="true">▶</span> Watch videos</a>
-          </div>
-          <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><span>⚙</span><span>✦</span><span>◎</span></div><p><strong>Curiosity meets clarity.</strong><br>Big ideas, made understandable.</p></div>
-        </div>
-        <div class="hero-art" aria-label="Illustration of science, engineering and space">
-          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-          <div class="planet planet-large"></div><div class="planet planet-small"></div>
-          <div class="art-card card-machine"><span class="art-icon">⚙</span><span><b>Engineering</b><small>Built by brilliant ideas</small></span></div>
-          <div class="art-card card-space"><span class="art-icon">✦</span><span><b>Space & beyond</b><small>Explore the unknown</small></span></div>
-          <div class="art-card card-science"><span class="art-icon">⌬</span><span><b>Science explained</b><small>Understand the why</small></span></div>
-          <div class="hero-stamp"><span>STAY</span><strong>CURIOUS</strong><span>EVERY DAY</span></div>
-        </div>
-      </div>
-      <div class="container topic-strip"><span>EXPLORE THE UNEXPLAINED</span><span>SCIENCE</span><i>✦</i><span>ENGINEERING</span><i>✦</i><span>SPACE</span><i>✦</i><span>TECHNOLOGY</span></div>
+      <a class="short-card" href="https://www.youtube.com/shorts/iI7WpLUUSCc" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/iI7WpLUUSCc/hqdefault.jpg" alt="How Do They Lift a 10,000-Ton Platform?" loading="lazy">
+        <h2>How Do They Lift a 10,000-Ton Platform?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/8xFS9t7FCQw" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/8xFS9t7FCQw/hqdefault.jpg" alt="Why Does Water Hide Things?" loading="lazy">
+        <h2>Why Does Water Hide Things?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/DrdHY3MKWAA" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/DrdHY3MKWAA/hqdefault.jpg" alt="How Does This Train Float?" loading="lazy">
+        <h2>How Does This Train Float?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/f8-PcQzFOw8" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/f8-PcQzFOw8/hqdefault.jpg" alt="What Powers Satellites 24/7?" loading="lazy">
+        <h2>What Powers Satellites 24/7?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/8puUdImTvY4" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/8puUdImTvY4/hqdefault.jpg" alt="Explore This Engineering Mystery" loading="lazy">
+        <h2>Explore This Engineering Mystery</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/Fpwixh1JQjQ" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/Fpwixh1JQjQ/hqdefault.jpg" alt="Amazing Technology Explained" loading="lazy">
+        <h2>Amazing Technology Explained</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/ba1lK51lnJY" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/ba1lK51lnJY/hqdefault.jpg" alt="What Happens When Lightning Strikes Sand?" loading="lazy">
+        <h2>What Happens When Lightning Strikes Sand?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/xTMX-8ta8TM" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/xTMX-8ta8TM/hqdefault.jpg" alt="How Do Submarines Work?" loading="lazy">
+        <h2>How Do Submarines Work?</h2><span>Watch Short ↗</span>
+      </a>
+      <a class="short-card" href="https://www.youtube.com/shorts/txAPzoV7Tl8" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.youtube.com/vi/txAPzoV7Tl8/hqdefault.jpg" alt="Discover the Science Behind Technology" loading="lazy">
+        <h2>Discover the Science Behind Technology</h2><span>Watch Short ↗</span>
+      </a>
     </section>
 
-    <section class="section explore-section" id="explore">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">YOUR CURIOSITY PLAYGROUND</p><h2>Explore by <span>interest.</span></h2></div>
-          <p>Follow a question. Discover a new world.<br>There's always more to understand.</p>
-        </div>
-        <div class="category-grid">
-          <a class="category-card category-machines" href="#latest" data-category-link="Mega Machines"><span class="category-number">01 / ENGINEERING</span><span class="category-symbol">⚙</span><h3>Mega Machines</h3><p>Meet the colossal machines that build, lift and move our world.</p><span class="card-link">Explore stories <b>↗</b></span></a>
-          <a class="category-card category-space" href="#latest" data-category-link="Space & Universe"><span class="category-number">02 / COSMOS</span><span class="category-symbol">✦</span><h3>Space & Universe</h3><p>Journey through planets, stars and the edges of what we know.</p><span class="card-link">Explore stories <b>↗</b></span></a>
-          <a class="category-card category-science" href="#latest" data-category-link="Science Explained"><span class="category-number">03 / DISCOVERY</span><span class="category-symbol">⌬</span><h3>Science Explained</h3><p>Unpack the surprising science hidden in everyday life.</p><span class="card-link">Explore stories <b>↗</b></span></a>
-          <a class="category-card category-tech" href="#latest" data-category-link="How Things Work"><span class="category-number">04 / INNOVATION</span><span class="category-symbol">⟡</span><h3>How Things Work</h3><p>Understand the technology and clever design all around you.</p><span class="card-link">Explore stories <b>↗</b></span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section latest-section" id="latest">
-      <div class="container">
-        <div class="section-heading latest-heading">
-          <div><p class="eyebrow">FRESH FROM THE ENGINE</p><h2>Curiosity starts <span>here.</span></h2></div>
-          <label class="search-box"><span aria-hidden="true">⌕</span><input id="storySearch" type="search" placeholder="Search stories..." aria-label="Search stories"></label>
-        </div>
-        <div class="filter-row" role="group" aria-label="Filter stories">
-          <button class="filter-button active" data-filter="All">All stories</button>
-          <button class="filter-button" data-filter="Mega Machines">Mega Machines</button>
-          <button class="filter-button" data-filter="Space & Universe">Space</button>
-          <button class="filter-button" data-filter="Science Explained">Science</button>
-          <button class="filter-button" data-filter="How Things Work">How things work</button>
-        </div>
-        <div class="story-grid" id="storyGrid">
-          <article class="story-card" data-category="How Things Work" data-search="airbag deploy crash safety sensors car">
-            <div class="story-visual visual-airbag"><span class="visual-label">EVERYDAY ENGINEERING</span><span class="visual-emoji">🚘</span><span class="visual-big">0.03s</span></div>
-            <div class="story-content"><p class="story-meta">HOW THINGS WORK <span>•</span> 4 MIN READ</p><h3>How Do Airbags Deploy So Fast?</h3><p>A look inside the sensors and chemistry that help protect passengers in a crash.</p><a href="/blog/how-things-work/how-airbags-deploy/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-          <article class="story-card" data-category="Space & Universe" data-search="mars rover earth control communication space">
-            <div class="story-visual visual-mars"><span class="visual-label">SPACE EXPLORATION</span><span class="visual-emoji">🪐</span><span class="visual-big">MARS</span></div>
-            <div class="story-content"><p class="story-meta">SPACE & UNIVERSE <span>•</span> 5 MIN READ</p><h3>Who Controls Mars Rovers From Earth?</h3><p>Discover how commands travel across millions of kilometres to robotic explorers.</p><a href="/blog/space-universe/how-mars-rovers-are-controlled/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-          <article class="story-card" data-category="Mega Machines" data-search="floating crane offshore oil platform heavy lift ocean">
-            <div class="story-visual visual-crane"><span class="visual-label">MEGA MACHINES</span><span class="visual-emoji">🏗️</span><span class="visual-big">HEAVY LIFT</span></div>
-            <div class="story-content"><p class="story-meta">MEGA MACHINES <span>•</span> 6 MIN READ</p><h3>How Giant Floating Cranes Lift Offshore Platforms</h3><p>Explore the engineering behind some of the largest lifts ever performed at sea.</p><a href="/blog/mega-machines/how-giant-cranes-work/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-          <article class="story-card" data-category="Science Explained" data-search="cyclone formation weather ocean atmosphere science">
-            <div class="story-visual visual-cyclone"><span class="visual-label">SCIENCE EXPLAINED</span><span class="visual-emoji">🌀</span><span class="visual-big">CYCLONES</span></div>
-            <div class="story-content"><p class="story-meta">SCIENCE EXPLAINED <span>•</span> 3 MIN READ</p><h3>How Does a Cyclone Form?</h3><p>Warm ocean water, rising air and Earth's rotation combine to create powerful storms.</p><a href="/blog/science-explained/how-cyclones-form/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-          <article class="story-card" data-category="Mega Machines" data-search="dam construction concrete engineering water">
-            <div class="story-visual visual-dam"><span class="visual-label">ENGINEERING MARVELS</span><span class="visual-emoji">🌊</span><span class="visual-big">MEGA DAMS</span></div>
-            <div class="story-content"><p class="story-meta">MEGA MACHINES <span>•</span> 7 MIN READ</p><h3>How a Giant Dam Holds Back Water</h3><p>Learn how shape, mass and carefully managed pressure keep enormous structures stable.</p><a href="/blog/mega-machines/how-dams-hold-back-water/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-          <article class="story-card" data-category="How Things Work" data-search="noise cancelling headphones sound waves technology">
-            <div class="story-visual visual-audio"><span class="visual-label">TECH EXPLAINED</span><span class="visual-emoji">🎧</span><span class="visual-big">SILENCE</span></div>
-            <div class="story-content"><p class="story-meta">HOW THINGS WORK <span>•</span> 4 MIN READ</p><h3>How Do Noise-Cancelling Headphones Work?</h3><p>See how microphones and carefully timed sound waves can reduce unwanted noise.</p><a href="/blog/how-things-work/how-noise-cancelling-works/" class="story-link">Read article <span>→</span></a></div>
-          </article>
-        </div>
-        <p class="empty-state" id="emptyState" hidden>No stories match that search. Try another keyword.</p>
-        <p class="content-note">Explore our growing library of explainers in Hindi and English. <a href="/blog/">Browse all blog articles →</a></p>
-      </div>
-    </section>
-
-<section class="section" id="videos">
-  <div class="container">
-    <p class="eyebrow">LATEST YOUTUBE SHORTS</p>
-    <h2>Watch our latest <span>videos.</span></h2>
-    <div class="shorts-grid">
-      <a class="short-card" href="https://www.youtube.com/shorts/47JWNZBCW2k" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/47JWNZBCW2k/hqdefault.jpg" alt="YouTube Short 1"><h3>What If Space Could Power Earth?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/iI7WpLUUSCc" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/iI7WpLUUSCc/hqdefault.jpg" alt="YouTube Short 2"><h3>How Do They Lift a 10,000-Ton Platform?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/8xFS9t7FCQw" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/8xFS9t7FCQw/hqdefault.jpg" alt="YouTube Short 3"><h3>Why Does Water Hide Things?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/DrdHY3MKWAA" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/DrdHY3MKWAA/hqdefault.jpg" alt="YouTube Short 4"><h3>How Does This Train Float?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/f8-PcQzFOw8" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/f8-PcQzFOw8/hqdefault.jpg" alt="YouTube Short 5"><h3>What Powers Satellites 24/7?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/8puUdImTvY4" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/8puUdImTvY4/hqdefault.jpg" alt="YouTube Short 6"><h3>Explore This Engineering Mystery</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/Fpwixh1JQjQ" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/Fpwixh1JQjQ/hqdefault.jpg" alt="YouTube Short 7"><h3>Amazing Technology Explained</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/ba1lK51lnJY" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/ba1lK51lnJY/hqdefault.jpg" alt="YouTube Short 8"><h3>What Happens When Lightning Strikes Sand?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/xTMX-8ta8TM" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/xTMX-8ta8TM/hqdefault.jpg" alt="YouTube Short 9"><h3>How Do Submarines Work?</h3><p>Watch Short ↗</p></a>
-      <a class="short-card" href="https://www.youtube.com/shorts/txAPzoV7Tl8" target="_blank" rel="noopener noreferrer"><img src="https://img.youtube.com/vi/txAPzoV7Tl8/hqdefault.jpg" alt="YouTube Short 10"><h3>Discover the Science Behind Technology</h3><p>Watch Short ↗</p></a>
-    </div>
-  </div>
-</section>
-
-      <section class="about-section section" id="about">
-     <div class="container about-grid"><img class="about-logo" src="/learning-engine-logo.jpg" alt="Learning Engine Logo"> <div><p class="eyebrow">ABOUT LEARNING ENGINE</p><h2>The world is full of<br><span>“how does that work?”</span></h2><p>Learning Engine is built for curious minds. We explore the science, engineering and technology behind extraordinary machines, natural phenomena and everyday inventions — one clear explanation at a time.</p><a class="text-link" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Keep learning with us <span>↗</span></a></div></div>
-    </section>
+    <footer style="text-align:center;padding:30px 0 0;font-size:13px">
+      <a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe to Learning Engine on YouTube ↗</a>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-top"><a class="brand brand-footer" href="#"><img class="brand-logo" src="/learning-engine-logo.jpg" alt="Learning Engine Logo"><span class="brand-name">Learning<span>Engine</span></span></a><p>Stay curious. Keep discovering.</p><div class="social-links"><a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://www.instagram.com/learningengine.official" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/learningengine.official" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> Learning Engine. All rights reserved.</span><span>Made for curious minds <b>✦</b></span></div>
-  </footer>
 </body>
 </html>
