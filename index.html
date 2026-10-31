@@ -79,9 +79,196 @@
       .shorts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
       .short-card h2 { font-size: 13px; }
     }
+    
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e5e9f2;
+  box-shadow: 0 2px 12px rgba(20, 35, 70, 0.05);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  min-height: 76px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #172033;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.nav-brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #344054;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #345cf0;
+}
+
+.nav-links .subscribe-btn {
+  padding: 11px 16px;
+  color: white;
+  background: #345cf0;
+  border-radius: 9px;
+}
+
+.nav-links .subscribe-btn:hover {
+  background: #2447cf;
+  color: white;
+}
+
+.about-block {
+  max-width: 850px;
+  margin: 25px auto 0;
+  padding: 30px 20px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .nav-inner {
+    padding: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-links .subscribe-btn {
+    padding: 9px 11px;
+  }
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  box-shadow: 0 2px 12px rgba(20, 35, 70, .05);
+}
+.nav-inner {
+  max-width: 1200px;
+  min-height: 76px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #172033;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.nav-brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: #344054;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-links a:hover { color: #345cf0; }
+.nav-links .subscribe-btn {
+  padding: 11px 16px;
+  color: white;
+  background: #345cf0;
+  border-radius: 9px;
+}
+@media (max-width: 600px) {
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .nav-links a { font-size: 13px; }
+}
+
   </style>
 </head>
 <body>
+  
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/" aria-label="Learning Engine Home">
+      <img src="/learning-engine-logo.jpg" alt="Learning Engine logo">
+      <span>Learning Engine</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#videos">Videos</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#about">About</a>
+      <a class="subscribe-btn" href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe ↗</a>
+    </div>
+  </div>
+</nav>
+
   <main class="shorts-page" id="videos">
     <header class="shorts-heading">
       <p>LATEST YOUTUBE SHORTS</p>
