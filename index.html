@@ -248,7 +248,79 @@
   }
   .nav-links a { font-size: 13px; }
 }
+/* Learning Engine responsive layout */
+* {
+  box-sizing: border-box;
+}
 
+img {
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+.short-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.short-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  header,
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .shorts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .short-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .short-card h2 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  #about {
+    margin: 28px 12px !important;
+    padding: 26px 16px !important;
+  }
+
+  #about h2 {
+    font-size: 25px !important;
+  }
+
+  footer {
+    padding: 24px 12px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .shorts-grid {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .short-card h2 {
+    font-size: 12px;
+  }
+}
   </style>
 </head>
 <body>
