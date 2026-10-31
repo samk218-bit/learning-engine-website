@@ -409,3 +409,52 @@ article h3 {
     font-size: 12px;
   }
 }
+/* Learning Engine Blog - Match main website */
+.blog-body {
+  background: #f4f7fc !important;
+  color: #182238;
+}
+
+.blog-body .site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.blog-body .nav-wrap {
+  max-width: 1490px;
+}
+
+.blog-body .brand-name {
+  color: #182238;
+}
+
+.blog-body .blog-hero {
+  background: #f4f7fc !important;
+  padding: 55px 0 40px;
+}
+
+.blog-body .blog-hero h1 {
+  color: #182238;
+}
+
+.blog-body .blog-hero h1 span {
+  color: #365dff;
+}
+
+.blog-body .blog-hero p {
+  color: #52627a;
+}
+
+.blog-body .blog-list-section {
+  background: #f4f7fc;
+}
+
+@media (max-width: 640px) {
+  .blog-body .blog-hero {
+    padding: 35px 0 25px;
+  }
+
+  .blog-body .blog-hero h1 {
+    font-size: 2.7rem;
+  }
+}
