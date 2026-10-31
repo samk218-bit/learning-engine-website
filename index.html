@@ -455,7 +455,24 @@ html {
 </section>
     <footer style="text-align:center;padding:30px 0 0;font-size:13px">
       <a href="https://youtube.com/@learningengine" target="_blank" rel="noopener noreferrer">Subscribe to Learning Engine on YouTube ↗</a>
+   
+<div id="visitor-counter" style="text-align:center; padding:16px 10px; color:#777; font-size:14px;">
+  Total website visits: <span id="visit-count">Loading...</span>
+</div>
     </footer>
   </main>
+
+<script>
+  (function waitForGoatCounter() {
+    if (window.goatcounter && window.goatcounter.visit_count) {
+      window.goatcounter.visit_count({
+        append: '#visit-count',
+        path: '/'
+      });
+    } else {
+      setTimeout(waitForGoatCounter, 200);
+    }
+  })();
+</script>
 </body>
 </html>
