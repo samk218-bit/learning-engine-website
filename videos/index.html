@@ -166,16 +166,104 @@
       <p>Discover science, engineering, space and amazing technology through simple, fascinating explanations.</p>
     </header>
 
-    <section class="shorts-grid" aria-label="Learning Engine videos">
-      <a class="short-card" href="https://www.youtube.com/shorts/473JWNZBCW2k" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.youtube.com/vi/473JWNZBCW2k/hqdefault.jpg" alt="What If Space Could Power Earth?" loading="lazy">
-        <h2>What If Space Could Power Earth?</h2><span>Watch Short ↗</span>
-      </a>
-      <a class="short-card" href="https://www.youtube.com/shorts/jqi9oCvef4M" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.youtube.com/vi/jqi9oCvef4M/hqdefault.jpg" alt="Latest Learning Engine video" loading="lazy">
-        <h2>Watch Our Latest Video</h2><span>Watch Short ↗</span>
-      </a>
-    </section>
+   <!-- Replace the existing video-card section with this block.
+     Keep your existing <main>, page heading, navigation and footer. -->
+<section aria-label="Learning Engine video library" style="margin-top:24px;">
+  <label for="videoSearch" style="display:block;font-weight:600;margin-bottom:8px;">Search all 260 videos</label>
+  <input id="videoSearch" type="search" placeholder="Search by video title..." style="box-sizing:border-box;width:100%;max-width:560px;padding:12px 14px;border:1px solid #d1d5db;border-radius:10px;font:inherit;margin-bottom:18px;">
+  <p id="videoStatus" aria-live="polite" style="margin:0 0 14px;color:#666;">Loading videos…</p>
+  <div class="shorts-grid" id="shortsGrid" aria-label="Learning Engine Shorts"></div>
+  <div id="videoPagination" style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin:24px 0;">
+    <button id="prevVideos" type="button" style="padding:10px 16px;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;">← Previous</button>
+    <span id="pageLabel" aria-live="polite">Page 1</span>
+    <button id="nextVideos" type="button" style="padding:10px 16px;border:1px solid #ccc;border-radius:8px;background:#fff;cursor:pointer;">Next →</button>
+  </div>
+</section>
+
+<script>
+(() => {
+  const grid = document.getElementById('shortsGrid');
+  const search = document.getElementById('videoSearch');
+  const status = document.getElementById('videoStatus');
+  const prev = document.getElementById('prevVideos');
+  const next = document.getElementById('nextVideos');
+  const pageLabel = document.getElementById('pageLabel');
+  const perPage = 24;
+  let allVideos = [];
+  let filteredVideos = [];
+  let page = 1;
+
+  function render() {
+    const totalPages = Math.max(1, Math.ceil(filteredVideos.length / perPage));
+    page = Math.min(page, totalPages);
+    const start = (page - 1) * perPage;
+    const pageVideos = filteredVideos.slice(start, start + perPage);
+    grid.replaceChildren();
+
+    pageVideos.forEach((video) => {
+      const card = document.createElement('a');
+      card.className = 'short-card';
+      card.href = video.url;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+
+      const img = document.createElement('img');
+      img.src = video.thumbnail;
+      img.alt = video.title;
+      img.loading = 'lazy';
+      img.onerror = () => { img.style.display = 'none'; };
+
+      const title = document.createElement('h2');
+      title.textContent = video.title;
+
+      const watch = document.createElement('span');
+      watch.textContent = 'Watch Short ↗';
+
+      card.append(img, title, watch);
+      grid.appendChild(card);
+    });
+
+    status.textContent = filteredVideos.length
+      ? `Showing ${start + 1}–${Math.min(start + perPage, filteredVideos.length)} of ${filteredVideos.length} videos · Oldest to newest`
+      : 'No videos found. Try another search.';
+    pageLabel.textContent = `Page ${page} of ${totalPages}`;
+    prev.disabled = page <= 1;
+    next.disabled = page >= totalPages;
+    prev.style.opacity = prev.disabled ? '0.5' : '1';
+    next.style.opacity = next.disabled ? '0.5' : '1';
+  }
+
+  search.addEventListener('input', () => {
+    const query = search.value.trim().toLocaleLowerCase();
+    filteredVideos = allVideos.filter(video =>
+      video.title.toLocaleLowerCase().includes(query)
+    );
+    page = 1;
+    render();
+  });
+
+  prev.addEventListener('click', () => {
+    if (page > 1) { page--; render(); }
+  });
+  next.addEventListener('click', () => {
+    if (page < Math.ceil(filteredVideos.length / perPage)) { page++; render(); }
+  });
+
+  fetch('./videos.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Could not load videos.json');
+      return response.json();
+    })
+    .then(videos => {
+      allVideos = videos;
+      filteredVideos = allVideos;
+      render();
+    })
+    .catch(() => {
+      status.textContent = 'Videos could not be loaded. Please check that videos.json is saved in the same videos folder as this page.';
+    });
+})();
+</script>
   </main>
 
   <footer class="site-footer">
