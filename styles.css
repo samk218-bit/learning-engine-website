@@ -1299,3 +1299,35 @@ header.site-nav {
 .site-footer a {
   color: #68b5ff;
 }
+
+/* Home page: enforce Dark Premium backgrounds */
+html,
+body {
+  background-color: #07111f !important;
+  color: #e8f1ff;
+}
+
+#home.home-hero {
+  background: radial-gradient(ellipse at top right, #102c57 0%, #07111f 70%) !important;
+  color: #e8f1ff !important;
+}
+
+#home .home-content,
+#home .home-eyebrow,
+#home .home-description,
+#home h1 {
+  color: #e8f1ff !important;
+}
+
+#home .home-category {
+  background: #101f38 !important;
+  color: #e8f1ff !important;
+  border-color: #31588a !important;
+  box-shadow: 0 8px 24px rgba(0, 119, 255, 0.12);
+}
+
+#home .home-secondary-button {
+  background: #101f38 !important;
+  color: #e8f1ff !important;
+  border-color: #31588a !important;
+}
