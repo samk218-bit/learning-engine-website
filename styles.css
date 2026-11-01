@@ -859,3 +859,8 @@ article h3 {
     grid-template-columns: 1fr;
   }
 }
+/* Hide only the homepage videos */
+body > #videos,
+#home + #videos {
+  display: none !important;
+}
