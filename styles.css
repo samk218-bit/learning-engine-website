@@ -859,8 +859,8 @@ article h3 {
     grid-template-columns: 1fr;
   }
 }
-/* Hide only the homepage videos */
-body > #videos,
-#home + #videos {
+/* Hide video cards without hiding the footer */
+#videos > .shorts-heading,
+#videos > .shorts-grid {
   display: none !important;
 }
