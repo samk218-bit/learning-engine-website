@@ -1473,3 +1473,25 @@ header,
   color: #b8c9e6;
   border-top: 1px solid #1e3a68;
 }
+
+/* Blog hero and heading contrast fix */
+.blog-body .blog-hero {
+  background: #07111f !important;
+  color: #e8f1ff !important;
+}
+
+.blog-body .blog-hero h1,
+.blog-body .blog-hero h2,
+.blog-body .blog-hero p,
+.blog-body .blog-hero span {
+  color: #e8f1ff;
+}
+
+.blog-body .blog-hero h1 span,
+.blog-body .section-heading span {
+  color: #3b82f6 !important;
+}
+
+.blog-body .section-heading {
+  color: #f8fbff !important;
+}
