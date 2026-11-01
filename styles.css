@@ -1331,3 +1331,31 @@ body {
   color: #e8f1ff !important;
   border-color: #31588a !important;
 }
+
+/* Dark Premium: About section */
+#about,
+.about-section,
+.about-card {
+  background: #0b1730;
+  color: #e8f1ff;
+  border: 1px solid #244675;
+}
+
+#about h2,
+#about h3,
+.about-section h2,
+.about-card h2 {
+  color: #e8f1ff;
+}
+
+#about p,
+.about-section p,
+.about-card p {
+  color: #b8c9e6;
+}
+
+#about a,
+.about-section a,
+.about-card a {
+  color: #ffffff;
+}
