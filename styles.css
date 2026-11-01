@@ -1379,3 +1379,15 @@ body {
 #about a {
   color: #ffffff;
 }
+
+/* Fix dark navigation ribbon across all pages */
+.site-nav,
+header.site-nav,
+nav.site-nav,
+.site-header,
+header,
+.navbar {
+  background-color: #0b1730;
+  border-bottom: 1px solid #1e3a68;
+  color: #e8f1ff;
+}
