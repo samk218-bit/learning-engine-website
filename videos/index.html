@@ -224,7 +224,7 @@
     });
 
     status.textContent = filteredVideos.length
-      ? `Showing ${start + 1}–${Math.min(start + perPage, filteredVideos.length)} of ${filteredVideos.length} videos · Oldest to newest`
+      ? `Showing ${start + 1}–${Math.min(start + perPage, filteredVideos.length)} of ${filteredVideos.length} videos · Newest to oldest`
       : 'No videos found. Try another search.';
     pageLabel.textContent = `Page ${page} of ${totalPages}`;
     prev.disabled = page <= 1;
