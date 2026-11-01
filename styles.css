@@ -1495,3 +1495,35 @@ header,
 .blog-body .section-heading {
   color: #f8fbff !important;
 }
+
+/* Blog page: improve heading and pill contrast */
+
+.blog-body .section-heading,
+.blog-body .section-heading span:first-child {
+  color: #f8fbff !important;
+}
+
+.blog-body .blog-hero .eyebrow,
+.blog-body .blog-hero .hero-eyebrow {
+  color: #60a5fa !important;
+}
+
+.blog-body .blog-hero a,
+.blog-body .blog-hero .pill,
+.blog-body .blog-hero button {
+  color: #e8f1ff !important;
+}
+
+.blog-body .blog-hero .pill,
+.blog-body .blog-hero a {
+  border-color: #244675;
+}
+
+.blog-body .blog-card h3,
+.blog-body .blog-card h3 a {
+  color: #f8fbff !important;
+}
+
+.blog-body .blog-card a:not(:hover) {
+  text-decoration-color: #60a5fa;
+}
