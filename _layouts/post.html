@@ -22,8 +22,7 @@
     </div>
   </header>
   <main id="article" class="article-shell">
-    <div class="article-topline"><a href="/blog/">← All articles</a><span>{{ page.lang | default: 'en' | upcase }}</span></div>
-    <article class="article-page">
+<div class="article-topline"><a href="/blog/">← सभी लेख</a><span>{% if page.lang == 'hi' %}हिंदी{% elsif page.lang == 'en' %}EN{% else %}{% assign first_char = page.title | slice: 0 %}{% if first_char >= 'अ' %}हिंदी{% else %}EN{% endif %}{% endif %}</span></div>    <article class="article-page">
       <p class="article-category">{{ page.categories | join: ' · ' | replace: '-', ' ' | upcase }}</p>
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p class="article-deck">{{ page.description }}</p>{% endif %}
