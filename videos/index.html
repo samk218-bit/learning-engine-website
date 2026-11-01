@@ -249,7 +249,7 @@
     if (page < Math.ceil(filteredVideos.length / perPage)) { page++; render(); }
   });
 
-  fetch('./videos-newest-to-oldest.json'))
+  fetch('./videos-newest-to-oldest.json')
     .then(response => {
       if (!response.ok) throw new Error('Could not load videos.json');
       return response.json();
