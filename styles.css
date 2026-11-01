@@ -1359,3 +1359,23 @@ body {
 .about-card a {
   color: #ffffff;
 }
+
+/* Dark Premium: Fix About Learning Engine card */
+#about {
+  background: #0b1730 !important;
+  color: #e8f1ff !important;
+  border: 1px solid #244675;
+  box-shadow: 0 0 28px rgba(37, 99, 235, 0.12);
+}
+
+#about h2 {
+  color: #e8f1ff !important;
+}
+
+#about p {
+  color: #b8c9e6 !important;
+}
+
+#about a {
+  color: #ffffff;
+}
