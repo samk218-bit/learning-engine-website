@@ -171,6 +171,14 @@
 <section aria-label="Learning Engine video library" style="margin-top:24px;">
   <label for="videoSearch" style="display:block;font-weight:600;margin-bottom:8px;">Search all 260 videos</label>
   <input id="videoSearch" type="search" placeholder="Search by video title..." style="box-sizing:border-box;width:100%;max-width:560px;padding:12px 14px;border:1px solid #d1d5db;border-radius:10px;font:inherit;margin-bottom:18px;">
+  <div id="videoCategories" style="display:flex;flex-wrap:wrap;gap:10px;margin:16px 0;">
+  <button type="button" data-category="All Videos">All Videos</button>
+  <button type="button" data-category="Mega Machines">Mega Machines</button>
+  <button type="button" data-category="Science">Science</button>
+  <button type="button" data-category="Space">Space</button>
+  <button type="button" data-category="Engineering">Engineering</button>
+  <button type="button" data-category="How Things Work">How Things Work</button>
+</div>
   <p id="videoStatus" aria-live="polite" style="margin:0 0 14px;color:#666;">Loading videos…</p>
   <div class="shorts-grid" id="shortsGrid" aria-label="Learning Engine Shorts"></div>
   <div id="videoPagination" style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin:24px 0;">
@@ -184,6 +192,8 @@
 (() => {
   const grid = document.getElementById('shortsGrid');
   const search = document.getElementById('videoSearch');
+  const categoryContainer = document.getElementById('videoCategories');
+let selectedCategory = 'All Videos';
   const status = document.getElementById('videoStatus');
   const prev = document.getElementById('prevVideos');
   const next = document.getElementById('nextVideos');
@@ -233,14 +243,55 @@
     next.style.opacity = next.disabled ? '0.5' : '1';
   }
 
-  search.addEventListener('input', () => {
-    const query = search.value.trim().toLocaleLowerCase();
-    filteredVideos = allVideos.filter(video =>
-      video.title.toLocaleLowerCase().includes(query)
-    );
-    page = 1;
-    render();
+  function applyVideoFilters() {
+  const query = search.value.trim().toLocaleLowerCase();
+
+  filteredVideos = allVideos.filter(video => {
+    const title = video.title.toLocaleLowerCase();
+    const matchesSearch = title.includes(query);
+
+    const categoryKeywords = {
+      'Mega Machines': ['machine', 'crane', 'dam', 'press', 'platform', 'giant', 'heavy', 'lift'],
+      'Science': ['science', 'water', 'light', 'darkness', 'air', 'physics', 'chemical', 'atom', 'earth', 'how does'],
+      'Space': ['space', 'earth', 'planet', 'mars', 'satellite', 'universe', 'solar', 'cosmic', 'electron'],
+      'Engineering': ['engineering', 'engineer', 'bridge', 'construction', 'steel', 'hydraulic', 'train', 'technology'],
+      'How Things Work': ['how', 'why', 'what happens', 'what if', 'works', 'working', 'inside', 'explained', 'watch', 'battery']
+    };
+
+    const keywords = categoryKeywords[selectedCategory];
+    const matchesCategory = selectedCategory === 'All Videos' ||
+      (keywords && keywords.some(keyword => title.includes(keyword)));
+
+    return matchesSearch && matchesCategory;
   });
+
+  page = 1;
+  render();
+}
+
+search.addEventListener('input', applyVideoFilters);
+
+categoryContainer.addEventListener('click', event => {
+  const button = event.target.closest('button[data-category]');
+  if (!button) return;
+
+  selectedCategory = button.dataset.category;
+
+  categoryContainer.querySelectorAll('button').forEach(item => {
+    const active = item === button;
+    item.style.background = active ? '#1d4ed8' : '#ffffff';
+    item.style.color = active ? '#ffffff' : '#1e293b';
+    item.style.border = active ? '1px solid #1d4ed8' : '1px solid #cbd5e1';
+    item.style.borderRadius = '999px';
+    item.style.padding = '9px 14px';
+    item.style.cursor = 'pointer';
+    item.style.fontWeight = active ? '600' : '500';
+  });
+
+  applyVideoFilters();
+});
+
+categoryContainer.querySelector('[data-category="All Videos"]').click();
 
   prev.addEventListener('click', () => {
     if (page > 1) { page--; render(); }
