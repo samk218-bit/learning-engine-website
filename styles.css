@@ -1391,3 +1391,85 @@ header,
   border-bottom: 1px solid #1e3a68;
   color: #e8f1ff;
 }
+
+/* ===== BLOG PAGE: MATCH PROFESSIONAL VIDEOS THEME ===== */
+
+.blog-body {
+  background: #07111f;
+  color: #e8f1ff;
+}
+
+.blog-body .site-header {
+  background: #0b1730;
+  border-bottom: 1px solid #1e3a68;
+  color: #e8f1ff;
+}
+
+.blog-body .site-header .brand-name,
+.blog-body .site-header .nav-links a {
+  color: #e8f1ff;
+}
+
+.blog-body .site-header .nav-links a:hover {
+  color: #60a5fa;
+}
+
+.blog-body .site-header .nav-cta {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.blog-body .blog-hero,
+.blog-body .blog-list-section {
+  background: #07111f;
+  color: #e8f1ff;
+}
+
+.blog-body .blog-hero h1,
+.blog-body .section-heading,
+.blog-body .blog-card h3,
+.blog-body .blog-card h3 a {
+  color: #f8fbff;
+}
+
+.blog-body .blog-hero p,
+.blog-body .blog-card-meta,
+.blog-body .blog-card p {
+  color: #b8c9e6;
+}
+
+.blog-body .blog-card {
+  background: #0b1730;
+  border: 1px solid #244675;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.blog-body .blog-card a:hover {
+  color: #60a5fa;
+}
+
+.blog-body input,
+.blog-body select,
+.blog-body .search-box,
+.blog-body .filter-button {
+  background: #0b1730;
+  color: #e8f1ff;
+  border: 1px solid #244675;
+}
+
+.blog-body input::placeholder {
+  color: #b8c9e6;
+}
+
+.blog-body .filter-button.active,
+.blog-body .filter-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.blog-body .site-footer {
+  background: #0b1730;
+  color: #b8c9e6;
+  border-top: 1px solid #1e3a68;
+}
