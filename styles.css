@@ -1691,3 +1691,13 @@ header,
         gap: 8px;
     }
 }
+
+/* BLOG HEADING VISIBILITY FIX */
+.blog-body .section-heading h2,
+.blog-body .section-heading h2 span {
+    color: #f1f5ff !important;
+}
+
+.blog-body .section-heading h2 span {
+    color: #438bff !important;
+}
