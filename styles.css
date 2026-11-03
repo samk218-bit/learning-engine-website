@@ -1731,3 +1731,20 @@ header,
     grid-template-columns: 1fr;
   }
 }
+
+/* FIX: Text visibility on white blog labels */
+.blog-language-note span,
+.blog-body .blog-language-note span {
+    color: #172033 !important;
+    background: #ffffff !important;
+}
+
+.blog-body .blog-filter-row button,
+.blog-body .blog-filter-row button span {
+    color: #ffffff !important;
+}
+
+.blog-body .search-box,
+.blog-body .search-box input {
+    color: #172033 !important;
+}
