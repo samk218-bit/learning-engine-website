@@ -195,6 +195,37 @@ select {
 button:hover {
   background-color: #174b91;
 }
+    
+/* Clear pagination buttons */
+#videoPagination button {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+  border: 1px solid #60a5fa !important;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 1 !important;
+  transition: background 0.2s ease;
+}
+
+#videoPagination button:hover:not(:disabled) {
+  background: #2563eb !important;
+}
+
+#videoPagination button:disabled {
+  background: #1e293b !important;
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+  cursor: not-allowed;
+  opacity: 1 !important;
+}
+
+#pageLabel {
+  color: #ffffff;
+  font-weight: 600;
+}
   </style>
 </head>
 <body>
