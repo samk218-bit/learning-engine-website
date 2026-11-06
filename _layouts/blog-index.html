@@ -31,7 +31,7 @@
       {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
       {% for post in sorted_posts %}
         <article class="blog-card" data-language="{{ post.lang | default: 'en' }}" data-categories="{{ post.categories | join: ' ' }}" data-search="{{ post.title | escape }} {{ post.description | escape }} {{ post.categories | join: ' ' }}">
-          <a class="blog-card-cover" href="{{ post.url }}"><span>{{ post.cover_emoji | default: '✦' }}</span><small>{{ post.categories | first | replace: '-', ' ' | upcase }}</small></a>
+          <a class="blog-card-cover" href="{{ post.url }}">{% if post.cover_image %}<img src="{{ post.cover_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">{% else %}<span>{{ post.cover_emoji | default: '✦' }}</span>{% endif %}<small>{{ post.categories | first | replace: '-', ' ' | upcase }}</small></a>
           <div class="blog-card-body"><div class="blog-card-meta"><span>{{ post.lang | default: 'en' | upcase }}</span><span>•</span><span>{{ post.read_time | default: 4 }} MIN READ</span></div><h3><a href="{{ post.url }}">{{ post.title }}</a></h3><p>{{ post.description }}</p><a class="story-link" href="{{ post.url }}">Read article <span>→</span></a></div>
         </article>
       {% endfor %}
