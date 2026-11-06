@@ -1791,3 +1791,20 @@ header,
   color: #ffffff !important;
   border: 1px solid #456dff;
 }
+/* Professional Blog Article Title */
+.article-shell h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .article-shell h1 {
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+  }
+}
