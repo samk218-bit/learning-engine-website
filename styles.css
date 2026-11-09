@@ -1889,3 +1889,17 @@ header,
 .blog-body .article-shell a {
   color: #5b91ff;
 }
+/* FIX BLOG ARTICLE WHITE CARD */
+.blog-body .article-page {
+  background: #0b1730 !important;
+  color: #eaf1ff !important;
+  border: 1px solid #1e3a60 !important;
+}
+
+.blog-body .article-page h1,
+.blog-body .article-page h2,
+.blog-body .article-page h3,
+.blog-body .article-page p,
+.blog-body .article-page li {
+  color: #eaf1ff !important;
+}
