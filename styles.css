@@ -1856,3 +1856,36 @@ header,
   height: 100%;
   object-fit: cover;
 }
+/* FIX BLOG ARTICLE CARD - DARK PREMIUM THEME */
+
+.blog-body .article-shell {
+  background: #0b1730 !important;
+  color: #eaf1ff !important;
+  border: 1px solid #1e3a60 !important;
+  border-radius: 22px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.blog-body .article-shell h1,
+.blog-body .article-shell h2,
+.blog-body .article-shell h3,
+.blog-body .article-shell h4 {
+  color: #f1f6ff !important;
+}
+
+.blog-body .article-shell p,
+.blog-body .article-shell li {
+  color: #c4d3e9 !important;
+}
+
+.blog-body .article-shell .article-deck {
+  color: #a9bddb !important;
+}
+
+.blog-body .article-shell .article-meta {
+  color: #8da8ce !important;
+}
+
+.blog-body .article-shell a {
+  color: #5b91ff;
+}
