@@ -1903,3 +1903,17 @@ header,
 .blog-body .article-page li {
   color: #eaf1ff !important;
 }
+/* FIX HEADER NAVIGATION TEXT COLOR */
+.site-header nav a,
+header nav a,
+.nav-links a,
+.site-nav a {
+  color: #ffffff !important;
+}
+
+.site-header nav a:hover,
+header nav a:hover,
+.nav-links a:hover,
+.site-nav a:hover {
+  color: #60a5fa !important;
+}
