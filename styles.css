@@ -1808,3 +1808,51 @@ header,
     letter-spacing: -0.8px;
   }
 }
+/* LEARNING ENGINE - PREMIUM BLOG DESIGN */
+
+.article-shell {
+  background: #0b1730;
+  color: #eaf1ff;
+  border: 1px solid #1e3a60;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.article-shell h1,
+.article-content h2,
+.article-content h3 {
+  color: #f1f6ff;
+}
+
+.article-deck,
+.article-content p {
+  color: #b8c9e5;
+}
+
+.article-cover {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #10213d;
+}
+
+.article-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-card-cover {
+  overflow: hidden;
+  background: #10213d;
+}
+
+.blog-card-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
